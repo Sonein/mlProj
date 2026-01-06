@@ -1,13 +1,13 @@
 import xml.etree.ElementTree as ET
 import re
-from pathlib import Path
-from sklearn.preprocessing import StandardScaler, normalize
 import numpy as np
 import torch
-from torch.utils.data import TensorDataset, DataLoader
 import torch.nn as nn
 import torch.nn.functional as F
 from copy import deepcopy
+from pathlib import Path
+from sklearn.preprocessing import StandardScaler, normalize
+from torch.utils.data import TensorDataset, DataLoader
 
 MPEG7_NS = {
     'mpeg7': 'http://www.mpeg7.org/2001/MPEG-7_Schema',
@@ -25,7 +25,7 @@ DESCRIPTOR_SIZES = {
     "RegionShapeType": 35,
 }
 
-#function for xml parsing of each descriptor
+#functions for xml parsing of each descriptor
 def _safe_float_list(text):
     if text is None:
         return []
