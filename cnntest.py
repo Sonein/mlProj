@@ -6,7 +6,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from copy import deepcopy
 from pathlib import Path
-from sklearn.preprocessing import StandardScaler, normalize
+from sklearn.preprocessing import StandardScaler
 from torch.utils.data import TensorDataset, DataLoader
 
 MPEG7_NS = {
