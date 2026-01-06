@@ -185,7 +185,7 @@ def transform_with_pca(X, pca_models, scalers):
     return np.concatenate(transformed_blocks, axis=1)
 
 splits = [403, 501, 410, 594, 482, 137]
-idp = Path("/home/sonya/Documents/mlProj/dataset-resized/")
+idp = Path("path to dataset-resized")
 IMAGE_REGEX = re.compile(r".*\.(xml)$", re.IGNORECASE)
 image_files = [f for f in idp.rglob("*") if IMAGE_REGEX.match(f.name) and (len(f.relative_to(idp).parts) <= 3)]
 image_count = len(image_files)
